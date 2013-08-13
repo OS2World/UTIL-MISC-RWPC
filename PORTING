@@ -1,0 +1,23 @@
+Porting RWPC to other Platforms / Compilers
+===========================================
+
+All source is supposed to be 100% ANSI C, except for one operating system
+specific file (os2file.c for OS/2).
+
+If you port rwpc to another platform, create a new file (e.g. linuxfile.c)
+which provides all the functions declared in osfile.h.
+
+If necessary, adapt macros.h, using #ifdefs.
+
+Create a new makefile in which you change the OSFILE macro to compile and
+link in your new file instead of os2file.c.
+
+Send me your changes, and I will be glad to incorporate them in the original
+archive.
+
+
+       Rupert Weber-Henschel
+       rupert.weber@physik.uni-muenchen.de
+       http://www.cip.physik.uni-muenchen.de/~weber/
+
+
